@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "devJS": "person.jsx",
   "scripts": {
+    "serve": "webpack-dev-server",
     "build": "webpack"
   },
   "repository": {
@@ -28,6 +30,7 @@
   },
   "dependencies": {
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "webpack-dev-server": "^1.14.1"
   }
 }

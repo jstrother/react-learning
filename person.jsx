@@ -8,14 +8,27 @@ var Person = function() {
 	return (
 		<div className="person">
 			<div className="person-name">{name}</div>
-			<img className="person-img" src={imgeUrl} />
+			<img className="person-img" src={imageUrl} />
 			<div className="person-job">
 				{job}
 			</div>
 		</div>
 	);
 };
+var PersonList = React.createClass({
+	render: function() {
+		var people = [];
+		for (var i=0; i<5; i++) {
+			people.push(<Person key={i}/>);
+		}
+		return (
+			<div className="person-list">
+				{people}
+			</div>
+		);
+	}
+});
 
 document.addEventListener('DOMContentLoaded', function() {
-	ReactDOM.render(<Person />, document.getElementByID('app'));
+	ReactDOM.render(<PersonList />, document.getElementById('app'));
 });
